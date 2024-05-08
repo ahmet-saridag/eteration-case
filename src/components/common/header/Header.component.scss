@@ -1,0 +1,146 @@
+.header {
+  width: 100%;
+  background-color: $blue;
+  color: $white;
+  padding: 15px;
+
+  @include lg {
+    height: 50px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 100%;
+    gap: 5px;
+
+    @include lg {
+      gap: 0;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 800;
+
+    @include lg {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 29.26px;
+      width: 25%;
+    }
+  }
+
+  &__search {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    padding: 0 20px;
+
+    @include lg {
+      width: 50%;
+    }
+
+    input {
+      width: 100%;
+      border: none;
+      padding: 5px 5px 5px 20px;
+
+      border-radius: 2px solid;
+
+      @include lg {
+        width: 400px;
+        padding: 10px 10px 10px 30px;
+      }
+    }
+
+    img {
+      position: absolute;
+      left: 22px;
+      width: 20px;
+
+      @include lg {
+        left: 23px;
+        width: 24px;
+      }
+    }
+  }
+
+  &__status {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    gap: 3px;
+
+    @include lg {
+      width: 25%;
+      gap: 10px;
+      flex-direction: row-reverse;
+    }
+
+    &-amount {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      gap: 3px;
+
+      img {
+        width: 15px;
+
+        @include lg {
+          width: 24px;
+        }
+      }
+
+      span {
+        font-size: 14px;
+
+        @include lg {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.5px;
+        }
+      }
+
+      @include lg {
+        gap: 10px;
+      }
+    }
+
+    &-profile {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      img {
+        width: 20px;
+
+        @include lg {
+          width: inherit;
+        }
+      }
+
+      span {
+        font-size: 14px;
+
+        @include lg {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19.5px;
+        }
+      }
+
+      @include lg {
+        gap: 2px;
+      }
+    }
+  }
+}
