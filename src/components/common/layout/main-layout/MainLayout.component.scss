@@ -1,0 +1,45 @@
+.main-layout {
+  width: 100%;
+  background-color: rgba(249, 249, 249, 1);
+  // background-color: red;
+  height: 100%;
+  padding: 15px;
+  padding-top: 30px;
+
+  .container {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+
+    @include xl {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__filters {
+    @include xl {
+      width: 25%;
+      height: 100%;
+    }
+  }
+
+  &__cards {
+    @include xl {
+      width: 55%;
+      height: 100%;
+    }
+  }
+
+  &__checkout {
+    display: none;
+    width: 20%;
+    height: 100%;
+
+    @include xl {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}

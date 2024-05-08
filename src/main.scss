@@ -1,4 +1,12 @@
 @import url("../src/components/common/header/Header.component.scss");
+@import url("../src/components/common/layout/main-layout/MainLayout.component.scss");
+@import url("../src/components/filters/filters.component.scss");
+@import url("../src/components/card/card.component.scss");
+@import url("../src/components/checkout/checkout.component.scss");
+@import url("../src/components/common/layout/product-detail-layout/ProductDetailLayout.component.scss");
+@import url("../src/components/product-detail/ProductDetail.component.scss");
+@import url("../src/components/pagination/pagination.component.scss");
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 .app {

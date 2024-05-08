@@ -1,0 +1,80 @@
+.checkout {
+  &__brands {
+    @include sm {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-title {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14.63px;
+      color: rgba(0, 0, 0, 1);
+    }
+
+    &-subtitle {
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 12.19px;
+      text-align: left;
+      color: $blue;
+    }
+
+    &-right {
+      display: flex;
+      margin-top: 10px;
+
+      @include sm {
+        margin-top: 0;
+      }
+    }
+
+    &-grey {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      padding: 8px 16px 8px 16px;
+      border-radius: 4px 0px 0px 0px;
+      background: rgb(237, 235, 235);
+    }
+
+    &-blue {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      padding: 8px 16px 8px 16px;
+      background: $blue;
+      color: $white;
+    }
+  }
+
+  &__total-price {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.07px;
+
+    span {
+      color: $blue;
+      font-weight: bold;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.25px;
+    text-align: center;
+    background-color: $blue;
+    border: none;
+    color: $white;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+}

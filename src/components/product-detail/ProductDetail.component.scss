@@ -1,0 +1,88 @@
+.product-detail {
+  &__card {
+    width: 100%;
+    padding: 10px 0px 0px 0px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    @include xl {
+      padding: 10px;
+    }
+
+    &-image {
+      width: 50%;
+      height: 350px;
+      background: rgba(196, 196, 196, 1);
+
+      @include xl {
+        width: 50%;
+        height: 422px;
+      }
+    }
+
+    &-content {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      // justify-content: space-between;
+      gap: 30px;
+      padding: 5px 20px;
+
+      @include xl {
+        padding: 10px 30px;
+        gap: 20px;
+      }
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 29.26px;
+
+      @include xl {
+        font-size: 24px;
+      }
+    }
+
+    &-subtitle {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 29.26px;
+      color: $blue;
+
+      @include xl {
+        font-size: 24px;
+      }
+    }
+
+    &-button {
+      width: 100%;
+      padding: 8px 16px 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19.5px;
+      text-align: center;
+      background-color: $blue;
+      border: none;
+      color: $white;
+      cursor: pointer;
+
+      @include xl {
+        font-size: 16px;
+      }
+    }
+
+    &-text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21.94px;
+
+      @include xl {
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -4,8 +4,9 @@
   color: $white;
   padding: 15px;
 
-  @include lg {
-    height: 50px;
+  @include xl {
+    height: auto;
+    padding: 10px;
   }
 
   .container {
@@ -16,7 +17,7 @@
     height: 100%;
     gap: 5px;
 
-    @include lg {
+    @include xl {
       gap: 0;
     }
   }
@@ -25,7 +26,7 @@
     font-size: 18px;
     font-weight: 800;
 
-    @include lg {
+    @include xl {
       font-size: 24px;
       font-weight: 800;
       line-height: 29.26px;
@@ -39,20 +40,20 @@
     justify-content: flex-start;
     align-items: center;
     width: 50%;
-    padding: 0 20px;
+    // padding: 0 20px;
 
-    @include lg {
+    @include xl {
       width: 50%;
     }
 
     input {
       width: 100%;
       border: none;
-      padding: 5px 5px 5px 20px;
+      padding: 5px 5px 5px 25px;
 
       border-radius: 2px solid;
 
-      @include lg {
+      @include xl {
         width: 400px;
         padding: 10px 10px 10px 30px;
       }
@@ -60,11 +61,11 @@
 
     img {
       position: absolute;
-      left: 22px;
+      left: 5px;
       width: 20px;
 
-      @include lg {
-        left: 23px;
+      @include xl {
+        left: 3px;
         width: 24px;
       }
     }
@@ -78,10 +79,10 @@
     flex-direction: column;
     gap: 3px;
 
-    @include lg {
+    @include xl {
       width: 25%;
       gap: 10px;
-      flex-direction: row-reverse;
+      flex-direction: inherit;
     }
 
     &-amount {
@@ -94,22 +95,22 @@
       img {
         width: 15px;
 
-        @include lg {
-          width: 24px;
+        @include xl {
+          width: 20px;
         }
       }
 
       span {
         font-size: 14px;
 
-        @include lg {
+        @include xl {
           font-size: 16px;
           font-weight: 400;
           line-height: 19.5px;
         }
       }
 
-      @include lg {
+      @include xl {
         gap: 10px;
       }
     }
@@ -123,22 +124,22 @@
       img {
         width: 20px;
 
-        @include lg {
-          width: inherit;
+        @include xl {
+          width: 24px;
         }
       }
 
       span {
         font-size: 14px;
 
-        @include lg {
+        @include xl {
           font-size: 16px;
           font-weight: 400;
           line-height: 19.5px;
         }
       }
 
-      @include lg {
+      @include xl {
         gap: 2px;
       }
     }
