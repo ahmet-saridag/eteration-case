@@ -1,19 +1,30 @@
-// import { useState } from "react";
-import Header from "./components/common/header/Header.component";
-import MainLayoutComponent from "./components/common/layout/main-layout/MainLayout.component";
-// import ProductDetailLayout from "./components/common/layout/product-detail-layout/ProductDetailLayout.component";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
+import Home from "./pages/home/home.page";
+import RootLayout from "./pages/route";
+import ProductDetailLayout from "./components/common/layout/product-detail-layout/product-detail-layout.component";
 import "../src/main.scss";
 import "./index.css";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    // errorElement: <ErrorPage />,
+    children: [
+      { index: true, element: <Home /> },
+      {
+        path: ":productId",
+        id: "product-detail",
+        element: <ProductDetailLayout />,
+        // action: newsletterAction,
+      },
+    ],
+  },
+]);
+
 function App() {
-  return (
-    <div className="app">
-      {/* <ProductDetailLayout /> */}
-      <Header />
-      <MainLayoutComponent />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

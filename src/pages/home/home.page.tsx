@@ -1,0 +1,57 @@
+import { useEffect, useState } from "react";
+import MainLayoutComponent from "../../components/common/layout/main-layout/main-layout.component.tsx";
+import { environment } from "../../configs/environment";
+import { getProducts } from "../../services/http.ts";
+import { useDispatch } from "react-redux";
+import { amountActions } from "../../store/amount-slice";
+
+function Home() {
+  const [isFetching, setIsFetching] = useState(false);
+  const [error, setError] = useState({ message: "" });
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    async function fetchProducts() {
+      setIsFetching(true);
+
+      try {
+        const products = await getProducts(environment.API_KEY);
+        dispatch(amountActions.pushProducts(products));
+        setIsFetching(false);
+      } catch (error: any) {
+        setError({
+          message:
+            error.message ||
+            "Could not fetch products, please try again later.",
+        });
+        setIsFetching(false);
+      }
+    }
+
+    fetchProducts();
+  }, []);
+
+  if (isFetching) {
+    return (
+      <div className="home">
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
+
+  if (error.message !== "") {
+    return (
+      <h1 className="text-red-500 text-center h-full mt-10">
+        Ürünler bulunamadı lütfen tekrar yenileyin sayfayı !!!
+      </h1>
+    );
+  }
+
+  return (
+    <div className="home">
+      <MainLayoutComponent />
+    </div>
+  );
+}
+
+export default Home;
