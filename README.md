@@ -12,7 +12,7 @@ Kullandığım teknolojiler:
 4. Vitest (Test yazmak için kullandım)
    ![Alt text](image.png)
 
-Comman Lines:
-npm i // paketleri yüklemek için
-npm run dev // Ayağa kaldırmak için projeyi
+Comman Lines:<br/>
+npm i // paketleri yüklemek için <br/>
+npm run dev // Ayağa kaldırmak için projeyi <br/>
 npm run test // Test case'leri check etmek için
