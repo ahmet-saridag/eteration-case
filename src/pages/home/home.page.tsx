@@ -43,7 +43,7 @@ function Home() {
   if (error.message !== "") {
     return (
       <h1 className="text-red-500 text-center h-full mt-10">
-        Ürünler bulunamadı lütfen tekrar yenileyin sayfayı !!!
+        Ürünler bulunamadi lütfen tekrar yenileyin sayfayi !!!
       </h1>
     );
   }

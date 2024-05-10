@@ -77,7 +77,7 @@ function CardComponent() {
     if (filters.brands.length > 0) {
       console.log(filters.brands);
     }
-  }, [filters]);
+  }, [filters, pageId, currentPage, products]);
 
   const addToCart = (product: any) => {
     if (product) {

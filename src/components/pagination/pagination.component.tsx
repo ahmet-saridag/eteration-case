@@ -29,6 +29,14 @@ function PaginationComponent() {
           <ul className="flex items-center h-8 text-sm">
             <button
               onClick={goToPrevPage}
+              // @ts-ignore
+              disabled={
+                pageId
+                  ? Number(pageId) === 1
+                    ? "cursor-not-allowed"
+                    : ""
+                  : "cursor-not-allowed"
+              }
               className={
                 pageId
                   ? Number(pageId) === 1
