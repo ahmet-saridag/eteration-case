@@ -1,14 +1,25 @@
 // import { useState } from "react";
+import { useState } from "react";
 import bagIcon from "../../../assets/bag-icon.svg";
 import profileIcon from "../../../assets/profile-icon.svg";
 import searchIcon from "../../../assets/search.svg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { filtersActions } from "../../../store/filters-slice";
 
 function Header() {
   const navigate = useNavigate();
+  const [inputValue, setInputValue] = useState("");
+  const dispatch = useDispatch();
 
   let checkoutAmount = useSelector((state: any) => state.amount.checkoutAmount);
+
+  const handleInput = (value: any) => {
+    if (value !== undefined) {
+      setInputValue(value);
+      dispatch(filtersActions.updateSearchText(value));
+    }
+  };
   return (
     <>
       <div className="header">
@@ -21,7 +32,12 @@ function Header() {
           </h1>
           <div className="header__search">
             <img src={searchIcon} alt="Bag icon" />
-            <input type="text" placeholder="Search" />
+            <input
+              onChange={(event) => handleInput(event.target.value)}
+              type="search"
+              placeholder="Search"
+              value={inputValue}
+            />
           </div>
           <div className="header__status">
             <div className="header__status-amount">

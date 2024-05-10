@@ -4,6 +4,7 @@ import { environment } from "../../configs/environment";
 import { getProducts } from "../../services/http.ts";
 import { useDispatch } from "react-redux";
 import { amountActions } from "../../store/amount-slice";
+import LoadingComponent from "../../components/loading/loading.component.tsx";
 
 function Home() {
   const [isFetching, setIsFetching] = useState(false);
@@ -34,7 +35,7 @@ function Home() {
   if (isFetching) {
     return (
       <div className="home">
-        <h1>Loading...</h1>
+        <LoadingComponent />
       </div>
     );
   }

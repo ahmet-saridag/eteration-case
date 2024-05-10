@@ -6,6 +6,7 @@ import { environment } from "../../configs/environment.ts";
 import { getProducts } from "../../services/http.ts";
 import { useDispatch } from "react-redux";
 import { amountActions } from "../../store/amount-slice.ts";
+import LoadingComponent from "../loading/loading.component.tsx";
 
 function ProductDetailComponent() {
   const { productId } = useParams();
@@ -48,7 +49,7 @@ function ProductDetailComponent() {
   if (isFetching) {
     return (
       <div className="home">
-        <h1>Loading...</h1>
+        <LoadingComponent />
       </div>
     );
   }

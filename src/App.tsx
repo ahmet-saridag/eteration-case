@@ -14,10 +14,14 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       {
-        path: ":productId",
+        path: "/product/:productId",
         id: "product-detail",
         element: <ProductDetailLayout />,
-        // action: newsletterAction,
+      },
+      {
+        path: "/page/:pageId",
+        id: "page-id",
+        element: <Home />,
       },
     ],
   },
