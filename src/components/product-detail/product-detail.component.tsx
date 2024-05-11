@@ -1,5 +1,3 @@
-// import { useState } from "react";
-// import searchIcon from "../../assets/search.svg";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { environment } from "../../configs/environment.ts";

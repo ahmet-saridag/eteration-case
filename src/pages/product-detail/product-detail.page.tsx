@@ -1,5 +1,3 @@
-// import { useState } from "react";
-
 import ProductDetailLayout from "../../components/common/layout/product-detail-layout/product-detail-layout.component";
 
 function ProductDetail() {

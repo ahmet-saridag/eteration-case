@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import searchIcon from "../../assets/search.svg";
 import CheckoutComponent from "../checkout/checkout.component";
 import { useState, useEffect } from "react";

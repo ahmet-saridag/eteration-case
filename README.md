@@ -14,7 +14,7 @@ Kullandığım teknolojiler:
 2. Tailwind, SCSS (evet ikisinide aynı anda kullandım daha faydalı olduğunu düşünüyorum 😎)
 3. Redux - Redux Toolkit
 4. Vitest (Test yazmak için kullandım)
-5. Açıklama case de olması gereken bütün özelikkleri eksiksiz kodladım.
+5. Açıklama belirttiğiniz case'de olması gereken bütün özelikkleri eksiksiz kodladım.
 
    <br/> <br/>
    ![Alt text](image.png)

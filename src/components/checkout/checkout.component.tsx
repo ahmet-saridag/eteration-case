@@ -1,5 +1,3 @@
-// import { useState } from "react";
-// import searchIcon from "../../assets/search.svg";
 import { useSelector, useDispatch } from "react-redux";
 import { amountActions } from "../../store/amount-slice";
 import { useEffect } from "react";
