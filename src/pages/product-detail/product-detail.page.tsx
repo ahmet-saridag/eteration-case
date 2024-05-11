@@ -1,4 +1,4 @@
-import ProductDetailLayout from "../../components/common/layout/product-detail-layout/product-detail-layout.component";
+import ProductDetailLayout from "@/components/common/layout/product-detail-layout/product-detail-layout.component";
 
 function ProductDetail() {
   return (

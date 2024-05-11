@@ -1,9 +1,9 @@
-import searchIcon from "../../assets/search.svg";
-import CheckoutComponent from "../checkout/checkout.component";
+import searchIcon from "@/assets/search.svg";
+import CheckoutComponent from "@/components/checkout/checkout.component";
 import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { filtersActions } from "../../store/filters-slice";
+import { filtersActions } from "@/store/filters-slice";
 
 const sortTypes = [
   { type: "Old to new", id: 1 },

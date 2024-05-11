@@ -1,7 +1,7 @@
-import CardComponent from "../../../card/card.component";
-import CheckoutComponent from "../../../checkout/checkout.component";
-import FiltersComponent from "../../../filters/filters.component";
-import PaginationComponent from "../../../pagination/pagination.component";
+import CardComponent from "@/components/card/card.component";
+import CheckoutComponent from "@/components/checkout/checkout.component";
+import FiltersComponent from "@/components/filters/filters.component";
+import PaginationComponent from "@/components/pagination/pagination.component";
 
 function MainLayoutComponent() {
   return (

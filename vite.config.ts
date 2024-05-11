@@ -1,10 +1,16 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import sass from "sass";
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   // @ts-ignore
   test: {
     // 👋 add the line below to add jsdom to vite
@@ -89,5 +95,5 @@ export default defineConfig({
       },
     },
   },
-  base: process.env.VITE_BASE_PATH || "/eteration-case",
+  base: process.env.VITE_BASE_PATH || "/",
 });

@@ -1,9 +1,9 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
-import Header from "./header.component";
+import Header from "@/components/common/header/header.component";
 import { BrowserRouter } from "react-router-dom";
-import { filtersActions } from "../../../store/filters-slice";
+import { filtersActions } from "@/store/filters-slice";
 
 const mockStore = configureStore([]);
 

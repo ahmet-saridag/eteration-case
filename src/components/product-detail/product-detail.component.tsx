@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { environment } from "../../configs/environment.ts";
-import { getProducts } from "../../services/http.ts";
+import { environment } from "@/configs/environment.ts";
+import { getProducts } from "@/services/http.ts";
 import { useDispatch } from "react-redux";
-import { amountActions } from "../../store/amount-slice.ts";
-import LoadingComponent from "../loading/loading.component.tsx";
+import { amountActions } from "@/store/amount-slice.ts";
+import LoadingComponent from "@/components/loading/loading.component.tsx";
 
 function ProductDetailComponent() {
   const { productId } = useParams();

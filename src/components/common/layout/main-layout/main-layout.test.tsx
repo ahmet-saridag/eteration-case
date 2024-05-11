@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
-import MainLayoutComponent from "./main-layout.component";
+import MainLayoutComponent from "@/components/common/layout/main-layout/main-layout.component";
 import { BrowserRouter } from "react-router-dom";
 
 const mockStore = configureStore([]);

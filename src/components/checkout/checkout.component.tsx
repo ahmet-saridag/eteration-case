@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { amountActions } from "../../store/amount-slice";
+import { amountActions } from "@/store/amount-slice";
 import { useEffect } from "react";
 
 function CheckoutComponent() {

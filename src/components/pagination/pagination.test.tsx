@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 import { BrowserRouter } from "react-router-dom";
-import PaginationComponent from "./pagination.component";
+import PaginationComponent from "@/components/pagination/pagination.component";
 
 const mockStore = configureStore([]);
 

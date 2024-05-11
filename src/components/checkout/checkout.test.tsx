@@ -1,9 +1,9 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
-import CheckoutComponent from "./checkout.component";
+import CheckoutComponent from "@/components/checkout/checkout.component";
 import { BrowserRouter } from "react-router-dom";
-import { amountActions } from "../../store/amount-slice";
+import { amountActions } from "@/store/amount-slice";
 
 const mockStore = configureStore([]);
 

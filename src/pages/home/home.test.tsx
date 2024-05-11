@@ -6,7 +6,7 @@ import {
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 import { BrowserRouter } from "react-router-dom";
-import Home from "./home.page";
+import Home from "@/pages/home/home.page";
 
 const mockStore = configureStore([]);
 

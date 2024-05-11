@@ -1,5 +1,5 @@
-import CheckoutComponent from "../../../checkout/checkout.component";
-import ProductDetailComponent from "../../../product-detail/product-detail.component";
+import CheckoutComponent from "@/components/checkout/checkout.component";
+import ProductDetailComponent from "@/components/product-detail/product-detail.component";
 
 function ProductDetailLayout() {
   return (

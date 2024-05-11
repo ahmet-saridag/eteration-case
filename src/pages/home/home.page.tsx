@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import MainLayoutComponent from "../../components/common/layout/main-layout/main-layout.component.tsx";
-import { environment } from "../../configs/environment";
-import { getProducts } from "../../services/http.ts";
+import MainLayoutComponent from "@/components/common/layout/main-layout/main-layout.component.tsx";
+import { environment } from "@/configs/environment";
+import { getProducts } from "@/services/http.ts";
 import { useDispatch } from "react-redux";
-import { amountActions } from "../../store/amount-slice";
-import LoadingComponent from "../../components/loading/loading.component.tsx";
+import { amountActions } from "@/store/amount-slice";
+import LoadingComponent from "@/components/loading/loading.component.tsx";
 
 function Home() {
   const [isFetching, setIsFetching] = useState(false);

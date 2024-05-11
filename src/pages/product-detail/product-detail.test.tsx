@@ -2,7 +2,7 @@ import { render } from "@testing-library/react";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 import { BrowserRouter } from "react-router-dom";
-import ProductDetail from "./product-detail.page";
+import ProductDetail from "@/pages/product-detail/product-detail.page";
 
 const mockStore = configureStore([]);
 

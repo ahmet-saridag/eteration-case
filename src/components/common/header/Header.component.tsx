@@ -1,10 +1,10 @@
 import { useState } from "react";
-import bagIcon from "../../../assets/bag-icon.svg";
-import profileIcon from "../../../assets/profile-icon.svg";
-import searchIcon from "../../../assets/search.svg";
+import bagIcon from "@/assets/bag-icon.svg";
+import profileIcon from "@/assets/profile-icon.svg";
+import searchIcon from "@/assets/search.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { filtersActions } from "../../../store/filters-slice";
+import { filtersActions } from "@/store/filters-slice";
 
 function Header() {
   const navigate = useNavigate();

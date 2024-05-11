@@ -1,9 +1,9 @@
 import { render } from "@testing-library/react";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
-import CardComponent from "./card.component";
+import CardComponent from "@/components/card/card.component";
 import { BrowserRouter } from "react-router-dom";
-import { getProducts } from "../../services/http.ts";
+import { getProducts } from "@/services/http.ts";
 
 const mockStore = configureStore([]);
 

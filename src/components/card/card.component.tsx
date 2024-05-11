@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { amountActions } from "../../store/amount-slice";
+import { amountActions } from "@/store/amount-slice";
 import { useParams } from "react-router-dom";
 
 function CardComponent() {
