@@ -15,6 +15,7 @@ function CardComponent() {
   const filters = useSelector((state: any) => state.filters.filters);
 
   const getPageData = () => {
+    setCurrentPage(1);
     const startIndex = pageId ? (pageId - 1) * 12 : (currentPage - 1) * 12;
     const endIndex = startIndex + 12;
     let selectedPageData = products.slice(startIndex, endIndex);

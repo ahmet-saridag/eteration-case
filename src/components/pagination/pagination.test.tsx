@@ -7,17 +7,6 @@ import PaginationComponent from "./pagination.component";
 const mockStore = configureStore([]);
 
 describe("Pagination Component", () => {
-  let store: any;
-
-  beforeEach(() => {
-    store = mockStore({
-      amount: {
-        products: [],
-        productData: [],
-      },
-    });
-  });
-
   test("renders pagination buttons with correct page numbers", () => {
     const initialState = {
       amount: {

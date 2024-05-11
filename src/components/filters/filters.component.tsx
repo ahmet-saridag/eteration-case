@@ -14,7 +14,6 @@ const sortTypes = [
 
 function FiltersComponent() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageData, setPageData] = useState([]);
   const [uniqueBrands, setUniqueBrands] = useState([]);
   const [uniqueBrandsFiltered, setUniqueBrandsFiltered] = useState([]);
   const [uniqueModels, setUniqueModels] = useState([]);
@@ -27,6 +26,7 @@ function FiltersComponent() {
   let products = useSelector((state: any) => state.amount.products);
 
   const getPageData = () => {
+    setCurrentPage(1);
     const startIndex = pageId ? (pageId - 1) * 12 : (currentPage - 1) * 12;
     const endIndex = startIndex + 12;
     let perPageData = products.slice(startIndex, endIndex);
