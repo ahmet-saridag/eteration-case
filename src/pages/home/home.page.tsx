@@ -42,9 +42,12 @@ function Home() {
 
   if (error.message !== "") {
     return (
-      <h1 className="text-red-500 text-center h-full mt-10">
-        Ürünler bulunamadi lütfen tekrar yenileyin sayfayi !!!
-      </h1>
+      <div className="home">
+        <h1 className="text-red-500 text-center h-full mt-10">
+          Ürünler bulunamadi lütfen tekrar yenileyin sayfayi !!!
+          <LoadingComponent />
+        </h1>
+      </div>
     );
   }
 
