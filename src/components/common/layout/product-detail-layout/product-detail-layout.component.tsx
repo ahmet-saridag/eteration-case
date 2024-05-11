@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import CheckoutComponent from "../../../checkout/checkout.component";
 import ProductDetailComponent from "../../../product-detail/product-detail.component";
 

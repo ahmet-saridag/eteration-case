@@ -1,9 +1,8 @@
-// import { useState } from "react";
 import CardComponent from "../../../card/card.component";
 import CheckoutComponent from "../../../checkout/checkout.component";
 import FiltersComponent from "../../../filters/filters.component";
-
 import PaginationComponent from "../../../pagination/pagination.component";
+
 function MainLayoutComponent() {
   return (
     <>

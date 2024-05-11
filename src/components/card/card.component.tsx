@@ -8,9 +8,7 @@ function CardComponent() {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageData, setPageData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-
   const { pageId }: any = useParams();
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const products = useSelector((state: any) => state.amount.products);

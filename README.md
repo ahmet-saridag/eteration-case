@@ -12,17 +12,22 @@ Kullandığım teknolojiler:
 
 1. Vite ile oluşturdum bu React projesini (JavaScript + TypeScript).
 2. Tailwind, SCSS (evet ikisinide aynı anda kullandım daha faydalı olduğunu düşünüyorum 😎)
-3. Redux - Redux Toolkit
-4. Vitest (Test yazmak için kullandım)
-5. Açıklama belirttiğiniz case'de olması gereken bütün özelikkleri eksiksiz kodladım.
+3. Flowbite UI library
+4. Redux - Redux Toolkit
+5. Vitest (Test yazmak için kullandım)
+6. Açıklamada belirttiğiniz case'de olması gereken bütün özelikkleri eksiksiz kodladım.
 
    <br/> <br/>
-   ![Alt text](image.png)
+   ![Test cases](image.png)
    <br/> <br/>
-   ![Alt text](image-1.png)
+   ![Home Page](image-1.png)
    <br/> <br/>
-   ![Alt text](image-2.png)
+   ![Adding Elements](image-2.png)
    <br/> <br/>
-   ![Alt text](image-3.png)
+   ![Product Detail](image-3.png)
    <br/> <br/>
-   ![Alt text](image-4.png)
+   ![Local Storage](image-4.png)
+
+Folder Structure
+<br/><br/>
+![Alt text](image-5.png)

@@ -5,18 +5,22 @@ import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { filtersActions } from "../../store/filters-slice";
 
+const sortTypes = [
+  { type: "Old to new", id: 1 },
+  { type: "New to old", id: 2 },
+  { type: "Price hight to low", id: 3 },
+  { type: "Price low to High", id: 4 },
+];
+
 function FiltersComponent() {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageData, setPageData] = useState([]);
   const [uniqueBrands, setUniqueBrands] = useState([]);
   const [uniqueBrandsFiltered, setUniqueBrandsFiltered] = useState([]);
-
   const [uniqueModels, setUniqueModels] = useState([]);
   const [uniqueModelsFiltered, setUniqueModelsFiltered] = useState([]);
-
   const [brandInput, setBrandInput] = useState("");
   const [modelInput, setModelInput] = useState("");
-
   const { pageId }: any = useParams();
   const dispatch = useDispatch();
 
@@ -26,7 +30,6 @@ function FiltersComponent() {
     const startIndex = pageId ? (pageId - 1) * 12 : (currentPage - 1) * 12;
     const endIndex = startIndex + 12;
     let perPageData = products.slice(startIndex, endIndex);
-
     const brands: any = [];
     const models: any = [];
 
@@ -52,13 +55,6 @@ function FiltersComponent() {
     setUniqueBrands(uniqueBrands);
     setUniqueModels(uniqueModels);
   };
-
-  const sortTypes = [
-    { type: "Old to new", id: 1 },
-    { type: "New to old", id: 2 },
-    { type: "Price hight to low", id: 3 },
-    { type: "Price low to High", id: 4 },
-  ];
 
   const handleSortType = (type: string) => {
     const checkboxes: any = document.querySelectorAll('input[type="checkbox"]');
@@ -91,7 +87,6 @@ function FiltersComponent() {
 
       if (box.id === value) {
         let carType: any = { type: type, value: value };
-        // console.log(carType);
         if (box.checked) {
           dispatch(filtersActions.updateCarType(carType));
         } else {

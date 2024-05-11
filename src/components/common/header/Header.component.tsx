@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { useState } from "react";
 import bagIcon from "../../../assets/bag-icon.svg";
 import profileIcon from "../../../assets/profile-icon.svg";
@@ -20,6 +19,7 @@ function Header() {
       dispatch(filtersActions.updateSearchText(value));
     }
   };
+
   return (
     <>
       <div className="header">

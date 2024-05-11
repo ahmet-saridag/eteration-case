@@ -53,8 +53,6 @@ const filtersSlice = createSlice({
 
     clearFiltersExceptOne(state: any, action: any) {
       if (action.payload) {
-        console.log(action.payload);
-
         switch (action.payload) {
           case "model":
             state.filters.searchText = "";
