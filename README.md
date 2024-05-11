@@ -10,6 +10,7 @@ Kullandığım teknolojiler:
 2. Tailwind ,SCSS (evet ikisinide aynı anda kullandım 😎)
 3. Redux - Redux Toolkit
 4. Vitest (Test yazmak için kullandım)
+   <br/> <br/>
    ![Alt text](image.png)
 
 Comman Lines:<br/>

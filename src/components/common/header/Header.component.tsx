@@ -35,7 +35,7 @@ function Header() {
             <input
               onChange={(event) => handleInput(event.target.value)}
               type="search"
-              placeholder="Search"
+              placeholder="Brand search.. (Smart, Ferrari etc.)"
               value={inputValue}
             />
           </div>

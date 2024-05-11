@@ -10,7 +10,13 @@ function FiltersComponent() {
   const [currentPage, setCurrentPage] = useState(1);
   const [pageData, setPageData] = useState([]);
   const [uniqueBrands, setUniqueBrands] = useState([]);
+  const [uniqueBrandsFiltered, setUniqueBrandsFiltered] = useState([]);
+
   const [uniqueModels, setUniqueModels] = useState([]);
+  const [uniqueModelsFiltered, setUniqueModelsFiltered] = useState([]);
+
+  const [brandInput, setBrandInput] = useState("");
+  const [modelInput, setModelInput] = useState("");
 
   const { pageId }: any = useParams();
   const dispatch = useDispatch();
@@ -56,6 +62,10 @@ function FiltersComponent() {
   ];
 
   const handleSortType = (type: string) => {
+    const checkboxes: any = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((box: any) => {
+      box.checked = false;
+    });
     const radioButtons = document.querySelectorAll('input[type="radio"]');
     radioButtons.forEach((button: any) => {
       if (button.id !== type) {
@@ -70,19 +80,60 @@ function FiltersComponent() {
   };
 
   const handleCarType = (type: string, value: any) => {
+    const radioButtons = document.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach((btn: any) => {
+      btn.checked = false;
+    });
     const checkboxes: any = document.querySelectorAll('input[type="checkbox"]');
     checkboxes.forEach((box: any) => {
+      if (box.title !== type) {
+        box.checked = false;
+      }
+
       if (box.id === value) {
         let carType: any = { type: type, value: value };
-        dispatch(filtersActions.updateCarType(carType));
+        // console.log(carType);
+        if (box.checked) {
+          dispatch(filtersActions.updateCarType(carType));
+        } else {
+          dispatch(filtersActions.removeCarType(carType));
+        }
       }
     });
+  };
+
+  const handleBrandInput = (value: any) => {
+    if (value !== undefined) {
+      setBrandInput(value);
+      if (uniqueBrands.length > 0) {
+        const filteredData = uniqueBrands.filter((item: any) => {
+          return item.brand.toLowerCase().includes(value.toLowerCase());
+        });
+        setUniqueBrandsFiltered(filteredData);
+      }
+    }
+  };
+  const handleModelInput = (value: any) => {
+    if (value !== undefined) {
+      setModelInput(value);
+      if (uniqueModels.length > 0) {
+        const filteredData = uniqueModels.filter((item: any) => {
+          return item.model.toLowerCase().includes(value.toLowerCase());
+        });
+        setUniqueModelsFiltered(filteredData);
+      }
+    }
   };
 
   useEffect(() => {
     getPageData();
   }, [pageId, currentPage]);
 
+  const brandsDataType =
+    uniqueBrandsFiltered.length > 0 ? uniqueBrandsFiltered : uniqueBrands;
+
+  const modelsDataType =
+    uniqueModelsFiltered.length > 0 ? uniqueModelsFiltered : uniqueModels;
   return (
     <>
       <div className="filters grid grid-cols-12 lg:flex">
@@ -112,19 +163,25 @@ function FiltersComponent() {
           <div className="filters__card">
             <div className="filters__search">
               <img src={searchIcon} alt="Bag icon" />
-              <input type="search" placeholder="Search" />
+              <input
+                onChange={(event) => handleBrandInput(event.target.value)}
+                type="search"
+                placeholder="Brand search"
+                value={brandInput}
+              />
             </div>
-            <div className="filters__checkbox-container">
-              {uniqueBrands.map((product: any) => {
+            <div className="filters__checkbox-container pl-1">
+              {brandsDataType.map((product: any) => {
                 return (
-                  <div
-                    onClick={() => {
-                      handleCarType("brand", product.brand);
-                    }}
-                    key={product.id}
-                    className="filters__checkbox"
-                  >
-                    <input id={product.brand} type="checkbox" />
+                  <div key={product.id} className="filters__checkbox">
+                    <input
+                      onClick={() => {
+                        handleCarType("brand", product.brand);
+                      }}
+                      id={product.brand}
+                      type="checkbox"
+                      title="brand"
+                    />
                     <label htmlFor={product.brand}>{product.brand}</label>
                   </div>
                 );
@@ -137,19 +194,25 @@ function FiltersComponent() {
           <div className="filters__card">
             <div className="filters__search">
               <img src={searchIcon} alt="Bag icon" />
-              <input type="search" placeholder="Search" />
+              <input
+                onChange={(event) => handleModelInput(event.target.value)}
+                type="search"
+                placeholder="Model search"
+                value={modelInput}
+              />
             </div>
-            <div className="filters__checkbox-container">
-              {uniqueModels.map((product: any) => {
+            <div className="filters__checkbox-container pl-1">
+              {modelsDataType.map((product: any) => {
                 return (
-                  <div
-                    onClick={() => {
-                      handleCarType("model", product.model);
-                    }}
-                    key={product.id}
-                    className="filters__checkbox"
-                  >
-                    <input id={product.model} type="checkbox" />
+                  <div key={product.id} className="filters__checkbox">
+                    <input
+                      onClick={() => {
+                        handleCarType("model", product.model);
+                      }}
+                      id={product.model}
+                      type="checkbox"
+                      title="model"
+                    />
                     <label htmlFor={product.model}>{product.model}</label>
                   </div>
                 );

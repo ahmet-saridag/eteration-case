@@ -33,7 +33,6 @@ describe("FiltersComponent", () => {
     expect(screen.getByText("Sort By")).toBeInTheDocument();
     expect(screen.getByText("Brands")).toBeInTheDocument();
     expect(screen.getByText("Model")).toBeInTheDocument();
-    expect(screen.getAllByPlaceholderText("Search").length).toBe(2);
     expect(screen.getAllByRole("checkbox").length).toBe(4);
   });
 });

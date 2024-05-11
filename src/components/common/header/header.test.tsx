@@ -28,7 +28,9 @@ describe("Header", () => {
     );
 
     expect(screen.getByText("Eteration")).toBeInTheDocument();
-    expect(screen.getByPlaceholderText("Search")).toBeInTheDocument();
+    expect(
+      screen.getByPlaceholderText("Brand search.. (Smart, Ferrari etc.)")
+    ).toBeInTheDocument();
     expect(screen.getByText("100₺")).toBeInTheDocument();
     expect(screen.getByText("Ahmet")).toBeInTheDocument();
     expect(screen.getByText("Ahmet")).toBeInTheDocument();
@@ -44,7 +46,9 @@ describe("Header", () => {
       </BrowserRouter>
     );
 
-    const searchInput = screen.getByPlaceholderText("Search");
+    const searchInput = screen.getByPlaceholderText(
+      "Brand search.. (Smart, Ferrari etc.)"
+    );
     fireEvent.change(searchInput, { target: { value: "test" } });
 
     // Search input'un değiştiğinde doğru Redux action'ının dispatch edildiğini kontrol et
