@@ -1,6 +1,4 @@
-# React + TypeScript + Vite
-
-Merhaba Eteration IT ekibi 👋 😎
+# Merhaba Eteration IT ekibi 👋 😎
 
 Bu Readme file'ı sizin için yazıyorum.
 
